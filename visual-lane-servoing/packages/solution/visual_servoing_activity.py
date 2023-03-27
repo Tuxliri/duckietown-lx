@@ -15,7 +15,7 @@ def get_steer_matrix_left_lane_markings(shape: Tuple[int, int]) -> np.ndarray:
     """
     h, w, = shape
     steer_matrix_left = np.zeros((h,w))
-    steer_matrix_left[:,:int(w/2)] = -0.004
+    steer_matrix_left[:,:int(w/2)] = -0.005
     return steer_matrix_left
 
 
@@ -30,7 +30,7 @@ def get_steer_matrix_right_lane_markings(shape: Tuple[int, int]) -> np.ndarray:
     """
     h, w, = shape
     steer_matrix_right = np.zeros((h,w))
-    steer_matrix_right[:,int(w/2):] = +0.0015
+    steer_matrix_right[:,int(w/2):] = +0.0005
     # ---
     return steer_matrix_right
 
@@ -71,7 +71,7 @@ def detect_lane_markings(image: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
     """
     STEP 3: non-maximal suppression of the gradients magnitudes
     """
-    threshold = 60
+    threshold = 30
 
     mask_mag = (Gmag > threshold)
 
@@ -80,8 +80,8 @@ def detect_lane_markings(image: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
     """
     white_lower_hsv = np.array([0, 0, 125])         # CHANGE ME
     white_upper_hsv = np.array([179, 65, 255])   # CHANGE ME
-    yellow_lower_hsv = np.array([20, 75, 150])        # CHANGE ME
-    yellow_upper_hsv = np.array([30, 255, 255])  # CHANGE ME
+    yellow_lower_hsv = np.array([0, 75, 150])        # CHANGE ME
+    yellow_upper_hsv = np.array([50, 255, 255])  # CHANGE ME
 
     mask_white = cv2.inRange(imghsv, white_lower_hsv, white_upper_hsv)
     mask_yellow = cv2.inRange(imghsv, yellow_lower_hsv, yellow_upper_hsv)

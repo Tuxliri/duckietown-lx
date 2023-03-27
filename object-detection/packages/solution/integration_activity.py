@@ -75,7 +75,7 @@ def filter_by_bboxes(bbox: Tuple[int, int, int, int]) -> bool:
 
     print(f"The area of the bounding box is: {area}")
 
-    if area>600:
+    if area>5000/10:
         return True
     else:
         return False

@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
+IMAGE_PATH="../../assets/images/visual_control/my_picture.png"
 
 class UnitTestMessage:
     # Test the WheelEncoderStamped messages
@@ -54,7 +55,7 @@ class UnitTestLMO:
 class UnitTestDLM:
     # Test the detection and estimation of lane marking orientations
     def __init__(self, detect_lane_markings):
-        imgbgr = cv2.imread("../../assets/images/visual_control/pic10.png")
+        imgbgr = cv2.imread(IMAGE_PATH)
 
         img = cv2.cvtColor(imgbgr, cv2.COLOR_BGR2GRAY)
 
@@ -212,7 +213,7 @@ def project_image_to_ground(H, x):
 class UnitTestLM_MASKS:
     # Test the detection and estimation of lane marking orientations
     def __init__(self, get_steer_matrix_left_lane_markings, get_steer_matrix_right_lane_markings):
-        imgbgr = cv2.imread("../../assets/images/visual_control/pic10.png")
+        imgbgr = cv2.imread(IMAGE_PATH)
 
         img = cv2.cvtColor(imgbgr, cv2.COLOR_BGR2GRAY)
         shape = tuple(imgbgr.shape[0:2])
@@ -253,7 +254,7 @@ class UnitTestLM_MASKS:
 class UnitTestSTEERING:
     # Test the detection and estimation of lane marking orientations
     def __init__(self, get_steer_matrix_left_lane_markings, get_steer_matrix_right_lane_markings, detect_lane_markings):
-        imgbgr = cv2.imread("../../assets/images/visual_control/pic10.png")
+        imgbgr = cv2.imread(IMAGE_PATH)
 
         img = cv2.cvtColor(imgbgr, cv2.COLOR_BGR2GRAY)
         shape = tuple(imgbgr.shape[0:2])
@@ -263,7 +264,7 @@ class UnitTestSTEERING:
         
         left_lane_markings_img, right_lane_markings_img = detect_lane_markings(imgbgr)
 
-        steering = np.sum(STEER_LEFT_LM*left_lane_markings_img)+np.sum(STEER_RIGHT_LM*left_lane_markings_img)
+        steering = np.sum(STEER_LEFT_LM*left_lane_markings_img)+np.sum(STEER_RIGHT_LM*right_lane_markings_img)
 
         normalizer = 300000
         print("Commanding steering at a rate of: ",steering/normalizer*180/np.pi," [deg/s]")
