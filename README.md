@@ -6,7 +6,11 @@
 
 # About this repository
 
-This is an exercises repository containing activites and exercises compatible with the Duckietown infrastructure.
+This is a Duckietown learning experiences repository containing activites compatible with the Duckietown infrastructure. Visit us at the 
+[Duckietown Website](https://www.duckietown.com) for more learning materials, documentation, and demos.
+
+For guided setup instructions, lecture content, and more related to these LX, see the [Self Driving Cars with 
+Duckietown course on EdX](https://learning.edx.org/course/course-v1:ETHx+DT-01x+3T2022/home).
 
 # Setup
 
@@ -14,8 +18,16 @@ To use these learning experiences do the following:
 
 ## Step 0 - Requirements
 
-We assume here that you have already set up your Duckietown development environment following the steps in [Unit C-1 
-and C-2](https://docs.duckietown.org/daffy/opmanual_duckiebot/out/laptop_setup.html) of the Duckietown operation manual.
+We assume here that you have already set up your Duckietown development environment 
+following the steps in the 
+[Laptop setup](https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_laptop/index.html) and [Accounts setup](https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_account/index.html)
+sections of the of the Duckietown operation manual.
+
+<!--
+```{todo}
+absolute URL
+```
+-->
 
 Add your `docker.io` credentials to `dts` by running the following command,
 
@@ -143,6 +155,18 @@ in the notebooks to see if you need to access VNC.
 
 This simulation test is just that, a test. Don't trust it fully. If you want a more accurate
 metric of performance, continue reading to the `Perform local evaluation` section below.
+
+### ℹ️ Check Robot Compatibility
+While we try our best to support running these exercises on all versions of the Duckiebot, some activities require special hardware and
+are only supported on specific robots. Please use this section to ensure the compatibility of the exercise and your 
+robot.
+
+The support matrix of this exercise is as follows:
+
+| Duckiebot Type   	                                                                                | Configuration 	 | Support Level   	    |
+|---------------------------------------------------------------------------------------------------|-----------------|----------------------|
+| [DB21-J4](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311)            	 | Jetson 4GB    	 | ✔️ Full Support    	 |
+| [DB21-J2](https://get.duckietown.com/products/duckiebot-db21?variant=40700056830127)            	 | Jetson 2GB    	 | ⚠️ Partial Support 	 |
 
 
 ### 🚙 Testing on a physical robot

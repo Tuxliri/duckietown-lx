@@ -2,12 +2,18 @@
 <img src="./assets/images/dtlogo.png" alt="Duckietown Logo" width="50%">
 </p>
 
-# **Exercise: Visual Lane Servoing**
+# **Learning Experience (LX): Visual Lane Servoing**
 
-# About this exercise
+# About these activities
 
-In these activities, we will develop image processing techniques necessary for **visual lane servoing** which allows controlling 
-your Duckiebot to drive within lane markings.
+In this learning experience, we will develop image processing techniques necessary for **visual lane servoing** which 
+allows controlling your Duckiebot to drive within lane markings.
+
+This learning experience is provided by the Duckietown team and can be run on Duckiebots. Visit us at the 
+[Duckietown Website](https://www.duckietown.com) for more learning materials, documentation, and demos.
+
+For guided setup instructions, lecture content, and more related to this LX, see the [Self Driving Cars with 
+Duckietown course on EdX](https://learning.edx.org/course/course-v1:ETHx+DT-01x+3T2022/home).
 
 
 ## Grading challenge
@@ -18,6 +24,7 @@ You can verify the scores of your submissions on the [Challenge Leaderboard][lea
 
 [challenge]: https://challenges.duckietown.org/v4/humans/challenges/lx22-visservoing
 [leaderboard]: https://challenges.duckietown.org/v4/humans/challenges/lx22-visservoing/leaderboard
+
 
 
 # Instructions
@@ -82,6 +89,21 @@ in the notebooks to see if you need to access VNC.
 
 This simulation test is just that, a test. Don't trust it fully. If you want a more accurate
 metric of performance, continue reading to the `Perform local evaluation` section below.
+
+
+### ℹ️️ Check Robot Compatibility
+
+While we try our best to support running these exercises on all versions of the Duckiebot, some activities require special hardware and
+are only supported on specific robots. Please use this section to ensure the compatibility of the exercise and your
+robot.
+
+The support matrix of this exercise is as follows:
+
+| Duckiebot Type   	                                                                                | Configuration 	 | Support Level   	    |
+|---------------------------------------------------------------------------------------------------|-----------------|----------------------|
+| [DB21-J4](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311)            	 | Jetson 4GB    	 | ✔️ Full Support    	 |
+| [DB21-J2](https://get.duckietown.com/products/duckiebot-db21?variant=40700056830127)            	 | Jetson 2GB    	 | ✔️ Full Support 	    |
+
 
 
 ### 🚙 Testing on a physical robot

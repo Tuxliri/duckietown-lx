@@ -2,11 +2,22 @@
 <img src="./assets/images/dtlogo.png" alt="Duckietown Logo" width="50%">
 </p>
 
-# **Exercise: Braitenberg**
+# **Learning Experience (LX): Braitenberg**
 
-# About this exercise
+# About these activities
 
-In this exercise, you will learn how to manipulate and filter images to highlight specific objects before using these techniques to create your own Braitenberg agent for the task of avoiding duckies on the road. We'll guide you through the process step by step as you progress through the notebooks, and when you're satisfied with your results, you can submit your work to evaluate how your agent compares to solutions from other developers.
+In this learning experience, you will create your own Braitenberg agent for the task of avoiding duckies on the road. 
+You'll first develop computer vision techniques that manipulate and filter images to highlight specific objects, 
+then utilize the filtered images to guide your agent.
+
+We will guide you through the process step by step as you progress through the activities in each notebook, and when 
+you're satisfied with your results, you can submit your work to evaluate how your agent compares to solutions from other developers.
+
+This learning experience is provided by the Duckietown team and can be run on Duckiebots. Visit us at the 
+[Duckietown Website](https://www.duckietown.com) for more learning materials, documentation, and demos.
+
+For guided setup instructions, lecture content, and more related to this LX, see the [Self Driving Cars with 
+Duckietown course on EdX](https://learning.edx.org/course/course-v1:ETHx+DT-01x+3T2022/home).
 
 ## Grading challenge
 
@@ -77,6 +88,19 @@ in the notebooks to see if you need to access VNC.
 
 This simulation test is just that, a test. Don't trust it fully. If you want a more accurate
 metric of performance, continue reading to the `Perform local evaluation` section below.
+
+### ℹ️️ Check Robot Compatibility
+
+While we try our best to support running these exercises on all versions of the Duckiebot, some activities require special hardware and
+are only supported on specific robots. Please use this section to ensure the compatibility of the exercise and your
+robot.
+
+The support matrix of this exercise is as follows:
+
+| Duckiebot Type   	                                                                                | Configuration 	 | Support Level   	    |
+|---------------------------------------------------------------------------------------------------|-----------------|----------------------|
+| [DB21-J4](https://get.duckietown.com/products/duckiebot-db21?variant=41543707099311)            	 | Jetson 4GB    	 | ✔️ Full Support    	 |
+| [DB21-J2](https://get.duckietown.com/products/duckiebot-db21?variant=40700056830127)            	 | Jetson 2GB    	 | ✔️ Full Support 	    |
 
 
 ### 🚙 Testing on a physical robot
